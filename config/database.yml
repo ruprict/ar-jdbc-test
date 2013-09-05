@@ -1,0 +1,22 @@
+defaults: &defaults
+  adapter: jdbcpostgresql
+  host: localhost
+  port: 5432
+  username: postgres
+  password: postgres
+  encoding: utf8
+  template: template0
+  pool: 16
+  timeout: 5000
+
+development:
+  <<: *defaults
+  database: ar_jdbc_development
+
+test:
+  <<: *defaults
+  database: ar_jdbc_test
+
+production:
+  <<: *defaults
+  database: ar_jdbc_test
